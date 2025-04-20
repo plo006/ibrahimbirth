@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Invitation Registration</title>
+    <style>
+        /* General Body Styling */
+        body {
+            background-image: url('bg.jpg');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Heading Styling */
+        h1 {
+            text-align: center;
+            color: whitesmoke;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        /* Form Styling */
+        form {
+            background-color: rgba(255, 255, 255, 0.5); /* Slight white background with opacity */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            /* Limit the width of the form */
+            box-sizing: border-box;
+            /* Ensure padding doesn't affect width */
+            margin-top: 20px;
+            /* Space between heading and form */
+            backdrop-filter: blur(0.5px); /* Apply the blur effect */
+        }
+
+        /* Label Styling */
+        label {
+            font-weight: bold;
+            margin-bottom: 8px;
+            display: block;
+            color: #555;
+        }
+
+        /* Input and Textarea Styling */
+        input[type="text"],
+        textarea,
+        select {
+            width: 100%;
+            /* Full width */
+            padding: 12px;
+            /* Padding inside the input */
+            margin-bottom: 15px;
+            /* Space between input fields */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            box-sizing: border-box;
+            /* Include padding in width */
+        }
+
+        /* Adjusting the radio button */
+        input[type="radio"] {
+            margin-right: 10px;
+            /* Space between radio button and label */
+        }
+
+        /* Focus effect for input fields */
+        input[type="text"]:focus,
+        textarea:focus,
+        select:focus {
+            border-color: #e50914;
+            /* Red border color when focused */
+            outline: none;
+            /* Remove outline */
+        }
+
+        /* Styling Radio Buttons and Labels */
+        input[type="radio"]+label {
+            margin-right: 15px;
+            font-size: 14px;
+        }
+
+        /* Styling the Textarea */
+        textarea {
+            resize: vertical;
+            /* Allow vertical resizing of textarea */
+        }
+
+        /* Adjusting the big text */
+        big {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        /* Submit Button Styling */
+        button {
+            width: 100%;
+            /* Full width */
+            padding: 12px;
+            background-color: #e50914;
+            /* Red background */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+        }
+
+        /* Button hover effect */
+        button:hover {
+            background-color: #cc0000;
+            /* Darker red on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Birthday Invitation Registration</h1>
+        <form action="/submit.php">
+            <label for="Name"><b>NAME</b></label>
+            <input id="Name" type="text" placeholder="Enter your name">
+            <br>
+            <label for="FatherName"><b>FATHER NAME</b></label>
+            <input id="FatherName" type="text" placeholder="Enter your father name">
+            <br>
+            <label for="Brother"><b>BROTHER NAME</b></label>
+            <input id="Brother" type="text" placeholder="Enter your brother name">
+            <br>
+            <label for="address"><b>ADDRESS</b></label>
+            <textarea id="address" name="address" rows="4" cols="50">Address</textarea>
+            <br>
+            <label for="city"><b>SELECT CITY</b></label>
+            <select id="city" name="city" required>
+                <option value="lahore">Lahore</option>
+                <option value="karachi">Karachi</option>
+                <option value="islamabad">Islamabad</option>
+                <option value="gujrat">Gujrat</option>
+            </select>
+            <br>
+            <big>Choose your education</big>
+            <br>
+            <input type="radio" id="education1" name="edu" value="python_programer">
+            <label for="education1">Python Programmer</label>
+
+            <input type="radio" id="education2" name="edu" value="html">
+            <label for="education2">HTML</label>
+
+            <input type="radio" id="education3" name="edu" value="cpp">
+            <label for="education3">C++</label>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
